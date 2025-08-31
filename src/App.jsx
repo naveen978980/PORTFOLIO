@@ -1,0 +1,41 @@
+import React, { useEffect, useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Certs from './components/Certs'
+import Education from './components/Education'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+
+export default function App() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'dark'
+  })
+
+  useEffect(() => {
+    const root = document.documentElement
+    if (theme === 'dark') root.classList.add('dark')
+    else root.classList.remove('dark')
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  return (
+    <div className="font-display">
+      <Navbar onToggleTheme={() => setTheme(t => t === 'dark' ? 'light' : 'dark')} theme={theme} />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Certs />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  )
+}

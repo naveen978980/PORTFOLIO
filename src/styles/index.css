@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ring: 0 0% 50%;
+}
+
+* { scroll-margin-top: 90px; }
+
+.gradient-text {
+  background: linear-gradient(to right, #7a90ff, #24a6ff, #66ffe6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
