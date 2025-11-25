@@ -50,7 +50,7 @@ export const projects = [
     description: "AI-powered system for truck tracking and inventory control; improved logistics efficiency by ~20% with GPS, CV, and IoT integration.",
     stack: ["Python","OpenCV","IoT","GPS"],
     link: "",
-    image: "/project-truck.jpg"
+    image: "https://www.freepik.com/free-vector/gradient-self-driving-car-illustration_58435042.htm#fromView=keyword&page=2&position=20&uuid=f42c13c4-6cca-4a0c-908b-dcd50f1c243e&query=Truck+ai"
   },
   {
     name: "FishNet — AI-Powered Fish Tracking",
